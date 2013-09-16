@@ -1,4 +1,4 @@
-package org.owasp.esapi.c14n;
+package org.owasp.esapi.c14n.encoder;
 
 import org.junit.Test;
 import org.owasp.esapi.c14n.JavaScriptEncoder;

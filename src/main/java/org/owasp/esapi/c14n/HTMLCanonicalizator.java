@@ -17,7 +17,7 @@
 package org.owasp.esapi.c14n;
 
 
-import org.owasp.esapi.c14n.decoder.HTMLEntityDecoder;
+import org.owasp.esapi.c14n.decoder.HtmlEntityDecoder;
 
 /**
  * Reference implementation of the Encoder interface. This implementation takes
@@ -31,9 +31,9 @@ import org.owasp.esapi.c14n.decoder.HTMLEntityDecoder;
  */
 public class HTMLCanonicalizator implements Canonicalizator {
 
-    private final HTMLEntityDecoder htmlEntityDecoder;
+    private final HtmlEntityDecoder htmlEntityDecoder;
 
-    public HTMLCanonicalizator(HTMLEntityDecoder htmlEntityDecoder) {
+    public HTMLCanonicalizator(HtmlEntityDecoder htmlEntityDecoder) {
         this.htmlEntityDecoder = htmlEntityDecoder;
     }
 

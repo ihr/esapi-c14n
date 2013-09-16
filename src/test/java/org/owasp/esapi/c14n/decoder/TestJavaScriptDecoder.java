@@ -1,8 +1,7 @@
-package org.owasp.esapi.c14n;
+package org.owasp.esapi.c14n.decoder;
 
 import org.junit.Test;
 import org.owasp.esapi.c14n.codecs.PushbackString;
-import org.owasp.esapi.c14n.decoder.JavaScriptDecoder;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

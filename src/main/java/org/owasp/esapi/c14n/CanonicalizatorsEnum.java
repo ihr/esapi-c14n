@@ -1,6 +1,6 @@
 package org.owasp.esapi.c14n;
 
-import org.owasp.esapi.c14n.decoder.HTMLEntityDecoder;
+import org.owasp.esapi.c14n.decoder.HtmlEntityDecoder;
 import org.owasp.esapi.c14n.decoder.JavaScriptDecoder;
 import org.owasp.esapi.c14n.decoder.PercentDecoder;
 
@@ -12,7 +12,7 @@ import org.owasp.esapi.c14n.decoder.PercentDecoder;
  * To change this template use File | Settings | File Templates.
  */
 public enum CanonicalizatorsEnum {
-    JAVASCRIPT(new JavaScriptCanonicalizator(new JavaScriptDecoder())), HTML(new HTMLCanonicalizator(new HTMLEntityDecoder())),
+    JAVASCRIPT(new JavaScriptCanonicalizator(new JavaScriptDecoder())), HTML(new HTMLCanonicalizator(new HtmlEntityDecoder())),
     PERCENT(new PercentCanonicalizator(new PercentDecoder()));
 
     private final Canonicalizator canonicalizator;
