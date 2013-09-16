@@ -16,44 +16,37 @@ public class TestCssDecoder {
     private final CssDecoder cssDecoder = new CssDecoder();
 
     @Test
-    public void testCSSInvalidCodepointDecode()
-    {
+    public void testCSSInvalidCodepointDecode() {
         assertThat("\uFFFDg").isEqualTo(cssDecoder.decode("\\abcdefg"));
     }
 
     @Test
-    public void testCSSDecode()
-    {
+    public void testCSSDecode() {
         assertThat("<").isEqualTo(cssDecoder.decode("\\<"));
     }
 
     @Test
-    public void testCSSDecodeHexNoSpace()
-    {
+    public void testCSSDecodeHexNoSpace() {
         assertThat("Axyz").isEqualTo(cssDecoder.decode("\\41xyz"));
     }
 
     @Test
-    public void testCSSDecodeZeroHexNoSpace()
-    {
+    public void testCSSDecodeZeroHexNoSpace() {
         assertThat("Aabc").isEqualTo(cssDecoder.decode("\\000041abc"));
     }
 
     @Test
-    public void testCSSDecodeHexSpace()
-    {
+    public void testCSSDecodeHexSpace() {
         assertThat("Aabc").isEqualTo(cssDecoder.decode("\\41 abc"));
     }
 
     @Test
-    public void testCSSDecodeNL()
-    {
+    public void testCSSDecodeNL() {
         assertThat("abcxyz").isEqualTo(cssDecoder.decode("abc\\\nxyz"));
     }
 
     @Test
-    public void testCSSDecodeCRNL()
-    {
+    public void testCSSDecodeCRNL() {
         assertThat("abcxyz").isEqualTo(cssDecoder.decode("abc\\\r\nxyz"));
     }
 
